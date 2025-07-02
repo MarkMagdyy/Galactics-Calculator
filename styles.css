@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#calc {
+  font-family: Arial, sans-serif;
+  background-color: #474747;
+  border-radius: 15px;
+  min-width: 200px;
+  max-width: 400px;
+  align-items: center;
+  overflow: hidden;
+}
+
+#display:not(.form-check) {
+  width: 100%;
+  padding: 20px;
+  font-size: 5rem;
+  text-align: left;
+  border: none;
+  background-color: #383838;
+  color: white;
+}
+
+#keys:not(.form-check) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 25px;
+}
+
+#keys button {
+  width: 75px;
+  height: 75px;
+  border-radius: 50px;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#keys buttona:not(.equal-btn, .operator-btn) {
+  background-color: #383838;
+  color: #f0f0f0;  
+}
+
+#keys button:hover:not(.equal-btn, .operator-btn) {
+  background-color:#b0b0b0 ;
+}
+
+#keys button:active:not(.equal-btn, .operator-btn) {
+  background-color: #bcbcbc;
+}
+
+.operator-btn {
+  background-color: #f0e3ff;
+  color: #773bcf;
+}
+
+.equal-btn {
+  background-color: #7e3ff2; /* Purple as in your image */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.equal-btn:hover {
+  background-color: #692de0;
+}
+
+
+/* Remove default focus outline */
+.form-check-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Change the toggle background when checked */
+.form-check-input:checked {
+  background-color: #60007176 !important; /* green */
+  border-color: #f3c5fb !important;
+}
+
+/* Change the toggle background when unchecked */
+.form-check-input {
+  background-color: #aa62b7 !important;
+  border-color: #aa62b7 !important;
+}
+
+/* Optional: Change the thumb (the circle) color */
+/* Bootstrap uses ::before pseudo-element for the thumb */
+.form-check-input::before {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.form-check {
+  display: inline;
+}
+
+.form-check {
+  padding-left: 0 !important;
+}
