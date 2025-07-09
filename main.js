@@ -24,7 +24,8 @@ function deleteLast() {
 function calculate() {
   try {
     display.value = eval(display.value);
-  } catch {
+  }
+  catch {
     display.value = 'Error';
   }
 }

@@ -6,6 +6,14 @@ body {
   height: 100vh;
 }
 
+body {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.188), rgba(0, 0, 0, 0.5)),
+    url(img/BG.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
 #calc {
   font-family: Arial, sans-serif;
   background-color: #474747;
@@ -24,6 +32,10 @@ body {
   border: none;
   background-color: #383838;
   color: white;
+}
+
+#display:hover {
+  cursor:default ;
 }
 
 #keys:not(.form-check) {
