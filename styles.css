@@ -8,7 +8,7 @@ body {
 
 body {
     background-image:linear-gradient(rgba(0, 0, 0, 0.188), rgba(0, 0, 0, 0.5)),
-    url(https://cdn.discordapp.com/attachments/993501245434245202/1392472819883053077/IhX9NIQ.png?ex=686fa8df&is=686e575f&hm=4681281ba22f99525b3297a8c5ef41e43a1dd3611bd33de7104bad28dc9d673a&);
+    url(assets/BG.png);
     background-size: cover;
     background-position: center;
 
