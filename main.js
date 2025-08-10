@@ -7,10 +7,15 @@ function square() {
     }
   }
 
-  const display = document.getElementById("display");
+const display = document.getElementById("display");
+
+function updateDisplay() {
+    display.scrollLeft = display.scrollWidth;
+}
 
 function appendToDisplay(value) {
   display.value += value;
+  updateDisplay()
 }
 
 function clearDisplay() {
@@ -22,10 +27,14 @@ function deleteLast() {
 }
 
 function calculate() {
+  display.value = display.value.replace(/÷/g, "/")
+  display.value = display.value.replace(/x/g, "*");   // Convert × to * before evaluating
+  display.value = eval(display.value);
+
   try {
     display.value = eval(display.value);
-  }
-  catch {
+  }  catch {
     display.value = 'Error';
   }
+  
 }

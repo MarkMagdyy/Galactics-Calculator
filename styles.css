@@ -22,6 +22,15 @@ body {
   max-width: 400px;
   align-items: center;
   overflow: hidden;
+  box-shadow: 0 0 10px rgb(224, 191, 255);
+}
+
+#display {
+    user-select: none;
+    outline: none;      
+    text-align: right;
+    overflow-x: auto;  
+    white-space: nowrap; 
 }
 
 #display:not(.form-check) {
@@ -70,6 +79,11 @@ body {
 
 .operator-btn {
   background-color: #f0e3ff;
+  color: #773bcf;
+}
+
+.operator-btn:hover {
+  background-color: #f0e3ffc6;
   color: #773bcf;
 }
 
