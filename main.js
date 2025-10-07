@@ -22,13 +22,21 @@ function clearDisplay() {
   display.value = '';
 }
 
+if(display = "Error" || "Infinity") {
+  clearDisplay
+}
+
 function deleteLast() {
-  display.value = display.value.slice(0, -1);
+  if (display.value === "Infinity" || display.value === "Error") {
+    clearDisplay();
+  } else {
+    display.value = display.value.slice(0, -1);
+  }
 }
 
 function calculate() {
-  display.value = display.value.replace(/÷/g, "/")
-  display.value = display.value.replace(/x/g, "*");   // Convert × to * before evaluating
+  display.value = display.value.replace(/÷/g, "/")    // Convert / to ÷ before evaluating
+  display.value = display.value.replace(/x/g, "*");   // Convert * to x before evaluating
   display.value = eval(display.value);
 
   try {
